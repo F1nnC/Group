@@ -18,11 +18,11 @@ def index():
     return render_template("index.html")
 
 @app.route('/100/')  # connects /stub/ URL to stub() function
-def stub():
+def hundred():
     return render_template("100.html")
 
 @app.route('/rap/')  # connects /stub/ URL to stub() function
-def stub():
+def rap():
     return render_template("rap.html")
 
 # this runs the application on the development server
