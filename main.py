@@ -17,7 +17,7 @@ def page_not_found(e):
 def index():
     return render_template("index.html")
 
-@app.route('/100/')  # connects /100/ URL to 100() function
+@app.route('/tophundred/')  # connects /100/ URL to 100() function
 def tophundred():
     return render_template("100.html")
 
