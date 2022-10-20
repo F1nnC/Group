@@ -1,0 +1,19 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+<p class="text-secondary">Country is a genre that originates in America. It is very focused on lyrics. The guitar is the main instrument used for this genre. Along with banjos, EDMs and other instuments.</p>
+<!- This variable sets name of browser tab  -->
+{% set project = "Rap" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>Top Five Country Artists</strong></h1>
+        <h2 class="text-primary"><strong>Chris Stapleton </strong></h2>
+        <p class="text-secondary">Chris is a very lyrical country artist</p>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
