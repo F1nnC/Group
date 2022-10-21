@@ -25,6 +25,10 @@ def tophundred():
 def rap():
     return render_template("rap.html")
 
+@app.route('/Country/')  # connects /stub/ URL to stub() function
+def Country():
+    return render_template("Country.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
