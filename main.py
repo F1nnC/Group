@@ -29,6 +29,13 @@ def rap():
 def Country():
     return render_template("Country.html")
 
+@app.route('/Rock/')  # connects /stub/ URL to stub() function
+def Rock():
+    return render_template("Rock.html")
+
+@app.route('/Pop/')  # connects /stub/ URL to stub() function
+def Pop():
+    return render_template("Pop.html")
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
