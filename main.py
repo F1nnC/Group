@@ -36,6 +36,11 @@ def Rock():
 @app.route('/Pop/')  # connects /stub/ URL to stub() function
 def Pop():
     return render_template("Pop.html")
+
+@app.route('/songapi/')  # connects /stub/ URL to stub() function
+def SongApi():
+    return render_template("frontsong.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
