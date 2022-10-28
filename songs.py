@@ -1,5 +1,6 @@
 import random
 
+# the list of data
 songs_data = []
 song_list = [
     "Miss You: Oliver Tree",
@@ -14,14 +15,14 @@ song_list = [
     'Super Freaky Girl: Nicki Minaj'
 ]
 
-# Initialize jokes
+# Initialize Songs
 def initSongs():
-    # setup jokes into a dictionary with id, joke, haha, boohoo
+    # setup songs into a dictionary with id, song, like, dislike
     item_id = 0
     for item in song_list:
         songs_data.append({"id": item_id, "song": item, "like": 0, "dislike": 0})
         item_id += 1
-    # prime some haha responses
+    # prime some like responses
     for i in range(10):
         id = getRandomSongs()['id']
         addSongLike(id)
@@ -30,19 +31,19 @@ def initSongs():
         id = getRandomSongs()['id']
         addSongDislike(id)
         
-# Return all jokes from jokes_data
+# Return all songs from songs_data
 def getSongs():
     return(songs_data)
 
-# Joke getter
+# song getter
 def getSong(id):
     return(songs_data[id])
 
-# Return random joke from jokes_data
+# Return random song from songs_data
 def getRandomSongs():
     return(random.choice(songs_data))
 
-# Liked joke
+# Liked song
 def favoriteSong():
     best = 0
     bestID = -1
@@ -52,7 +53,7 @@ def favoriteSong():
             bestID = songs['id']
     return songs_data[bestID]
     
-# Jeered joke
+# Liked song
 def DislikeSong():
     worst = 0
     worstID = -1
@@ -62,39 +63,39 @@ def DislikeSong():
             worstID = song['id']
     return songs_data[worstID]
 
-# Add to haha for requested id
+# Add to like for requested id
 def addSongLike(id):
     songs_data[id]['like'] = songs_data[id]['like'] + 1
     return songs_data[id]['like']
 
-# Add to boohoo for requested id
+# Add to dislike for requested id
 def addSongDislike(id):
     songs_data[id]['dislike'] = songs_data[id]['dislike'] + 1
     return songs_data[id]['dislike']
 
-# Pretty Print joke
-def printJoke(song):
+# Pretty Print Song
+def printSong(song):
     print(song['id'], song['song'], "\n", "Like:", song['like'], "\n", "Dislike:", song['dislike'], "\n")
 
-# Number of jokes
+# Number of song
 def countSongs():
     return len(songs_data)
 
-# Test Joke Model
+# Test Song Model
 if __name__ == "__main__": 
-    initSongs()  # initialize jokes
+    initSongs()  # initialize song
     
-    # Most likes and most jeered
+    # Most likes and disliked
     best = favoriteSong()
     print("Most liked", best['like'])
-    printJoke(best)
+    printSong(best)
     worst = DislikeSong()
     print("Most Dislike", worst['dislike'])
-    printJoke(worst)
+    printSong(worst)
     
-    # Random joke
-    print("Random joke")
-    printJoke(getRandomSongs())
+    # Random song
+    print("Random Song")
+    printSong(getRandomSongs())
     
-    # Count of Jokes
+    # Count of Song
     print("Song Count: " + str(countSongs()))
