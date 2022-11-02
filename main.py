@@ -2,6 +2,7 @@
 from flask import render_template  # import render_template from "public" flask libraries
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
+
 from api import app_api # Blueprint import api definition
 from bp_projects.projects import app_projects # Blueprint directory import projects definition
 
@@ -17,7 +18,7 @@ def page_not_found(e):
 def index():
     return render_template("index.html")
 
-@app.route('/tophundred/')  # connects /100/ URL to 100() function
+@app.route('/topten/')  # connects /100/ URL to 100() function
 def tophundred():
     return render_template("100.html")
 
@@ -37,9 +38,9 @@ def Rock():
 def Pop():
     return render_template("Pop.html")
 
-@app.route('/songapi/')  # connects /stub/ URL to stub() function
-def SongApi():
-    return render_template("frontsong.html")
+@app.route('/About/')  # connects /stub/ URL to stub() function
+def About():
+    return render_template("About.html")
 
 # this runs the application on the development server
 if __name__ == "__main__":

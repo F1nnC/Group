@@ -36,7 +36,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 </head>
 
-<body>
+<body style="background-color: rgb(39, 39, 41)">
     {% include "layouts/navbar.html" %}
 
     {% block body %}
@@ -47,6 +47,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 </body>
 
 {% block background %}
+    <body style="background-color:rgb(39, 39, 41);">
+        
+    </body>
     <!-- <script src="{{ url_for('static', filename='js/three.r119.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/vanta.birds.min.js') }}"></script>
     <script>

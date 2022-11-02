@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Top 10" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>About</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+        <h2 class="text-primary"><strong>Finn</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+        <h2 class="text-primary"><strong>Jake</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+        <h2 class="text-primary"><strong>Max</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+        <h2 class="text-primary"><strong>Parker</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+    </div>
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>Why we liked this idea</strong></h1>
+        <p class="text-secondary">Put your name here</p>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
