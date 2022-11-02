@@ -16,7 +16,6 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 rj = response.json()
 
 # print(rj)
-x = range(10)
 
 one = rj['data']['artist']['discography']['singles']['items'][int(0)]['releases']['items'][int(0)]['name']
 two = rj['data']['artist']['discography']['singles']['items'][int(1)]['releases']['items'][int(0)]['name']
